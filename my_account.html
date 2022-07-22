@@ -64,43 +64,32 @@
             font-weight: bold;
             margin-bottom: 4px;
         }
-        .input{
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
+        .secondary-button{
+            background-color: var(--white);
+            color: var(--hospital-green);
             font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
-        }
-        .input-name, 
-        .input-email,
-        .input-password
-        {
-            margin-bottom: 22px;
-        }
-      
-        .primary-button{
-            background-color: var(--hospital-green);
-            color: var(--white);
-            width: 100%;
-            font-size: var(--md);
-            border: none;
+            border: 1px solid var(--hospital-green);
             border-radius: 8px;
             height: 50px;
             cursor: pointer;
-            font-weight: bold;   
+            font-weight: bold;               
+            width: 100%;
         }
         .login-button{
             margin-top: 14px;
             margin-bottom: 30px;
+        }
+        .value{
+            font-size: var(--md);
+            color: var(--very-light-pink);
+            margin: 8px 0 32px 0;
         }
         @media (max-width: 640px){
             .logo{
             display: block;
             }
 
-            .login-button{
+            .secondary-button{
                 margin-top: 13rem;
             }
         }
@@ -113,15 +102,12 @@
             <h1 class="title">My account</h1>
             <form action="/" class="form">
                 <label for="name" class="label">Name</label>
-                <input type="text" id="name" placeholder="Camila Yokoo" class="input input-name">
-
+                <p class="value">Camila Yokoo</p>
                 <label for="email" class="label">Email address</label>
-                <input type="text" id="email" placeholder="camilayokoo@gmail.com" class="input input-email">
-
+                <p class="value">camilayokoo@gmail.com</p>
                 <label for="password" class="label">Password</label>
-                <input type="password" id="password" placeholder="*********" class="input input-password">
-
-                <input type="submit" value="Create account" class="primary-button login-button">
+                <p class="value">*********</p>
+                <button class="secondary-button" type="button">Edit</button>
             </form>
         </div>
     </div>
