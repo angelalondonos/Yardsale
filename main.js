@@ -24,26 +24,26 @@ function toggleDesktopMenu(){
 function toggleMobileMenu(){
     mobileMenu.classList.toggle("inactive");
     aside.classList.add("inactive");
-    productDetailContainer.classList.add('inactive')
+    productDetailContainer.classList.add('inactive');
 }
 
 function toggleCartAside(){
     aside.classList.toggle("inactive");
     mobileMenu.classList.add("inactive");
     desktopMenu.classList.add("inactive");
-    productDetailContainer.classList.add('inactive')
+    productDetailContainer.classList.add('inactive');
 }
 
 /*Function to open and closed the product detail in the HTML - aside */
 function openProductDetail(){
-    productDetailContainer.classList.remove('inactive')
+    productDetailContainer.classList.remove('inactive');
     aside.classList.add('inactive');
 }
 
 function closeProductDetail(){
     desktopMenu.classList.add('inactive');
     mobileMenu.classList.add('inactive');
-    productDetailContainer.classList.add('inactive')
+    productDetailContainer.classList.add('inactive');
 }
 
 /* Info for products list */
