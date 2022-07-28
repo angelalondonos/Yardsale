@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.destop-menu');
 const burguerMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCartIcon = document.querySelector('.navbar-shopping-cart');
-const aside = document.querySelector('.product-detail');
+const aside = document.querySelector('.shopping-cart-detail');
 const cardContainer = document.querySelector('.cards-container');
 
 
@@ -88,18 +88,6 @@ productList.push ({
     image: 'https://m.media-amazon.com/images/I/81k2Gmal+VL._AC_SL1500_.jpg'
 }); 
 
-/*     <div class="product-card">
-    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-    <div class="product-info">
-    <div>
-        <p>$120,00</p>
-        <p>Bike</p> 
-    </div> 
-    <figure>
-        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
-        </figure>
-    </div> */
-
 /* Insert products in HTML*/
 function insertProducts(productList){
     for(product of productList){
@@ -110,7 +98,7 @@ function insertProducts(productList){
         productImg.setAttribute('src', product.image);
     
         const productInfo = document.createElement('div');
-        productInfo.classList.add('product-info');
+        productInfo.classList.add('product-info-home');
     
         const productInfoDiv = document.createElement('div');
     
