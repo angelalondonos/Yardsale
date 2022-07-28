@@ -3,15 +3,17 @@ const desktopMenu = document.querySelector('.destop-menu');
 const burguerMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCartIcon = document.querySelector('.navbar-shopping-cart');
-const aside = document.querySelector('.shopping-cart-detail');
+const aside = document.querySelector('.shopping-cart-detail'); //Aside
 const cardContainer = document.querySelector('.cards-container');
+const productDetailContainer = document.querySelector('.product-detail-info'); //Aside
+const productDetailCloseIcon = document.querySelector('.product-detail-info-close');
 
 
 /*Evento to click*/
 menuEmail.addEventListener('click', toggleDesktopMenu);
 burguerMenu.addEventListener('click', toggleMobileMenu);
 menuCartIcon.addEventListener('click', toggleCartAside);
-
+productDetailCloseIcon.addEventListener('click', closeProductDetail);
 
 /* Functions for addEventListener */
 function toggleDesktopMenu(){
@@ -22,12 +24,26 @@ function toggleDesktopMenu(){
 function toggleMobileMenu(){
     mobileMenu.classList.toggle("inactive");
     aside.classList.add("inactive");
+    productDetailContainer.classList.add('inactive')
 }
 
 function toggleCartAside(){
     aside.classList.toggle("inactive");
     mobileMenu.classList.add("inactive");
     desktopMenu.classList.add("inactive");
+    productDetailContainer.classList.add('inactive')
+}
+
+/*Function to open and closed the product detail in the HTML - aside */
+function openProductDetail(){
+    productDetailContainer.classList.remove('inactive')
+    aside.classList.add('inactive');
+}
+
+function closeProductDetail(){
+    desktopMenu.classList.add('inactive');
+    mobileMenu.classList.add('inactive');
+    productDetailContainer.classList.add('inactive')
 }
 
 /* Info for products list */
@@ -96,6 +112,7 @@ function insertProducts(productList){
     
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
+        productImg.addEventListener('click', openProductDetail);
     
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info-home');
@@ -129,3 +146,4 @@ function insertProducts(productList){
 }
 
 insertProducts(productList);
+

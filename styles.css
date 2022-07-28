@@ -162,13 +162,13 @@ nav{
 }
 
 /* Aside (product detail and cart) */
-.product-detail {
+.shopping-cart-detail {
     background-color: var(--white);
     width: 360px;
-    padding: 0 24px;
+    padding: 24px;
     box-sizing: border-box;
     position: absolute;
-    right: 0;
+    right: 0; 
   }
   .title-container {
     display: flex;
