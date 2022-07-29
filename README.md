@@ -12,7 +12,7 @@ This is the principal view
 
 ## Development environment
 
-This aplication is built in <strong>Javascrip</strong> with <strong>HTML</strong> and <strong>CSS</strong>
+This application is built in **Javascript** with **HTML** and **CSS**
 
 
 
